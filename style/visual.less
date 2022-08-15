@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.summary-row:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.summary-row.late {
+    background-color: red;
+}
+
+.details {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+th {
+    background: white;
+    position: sticky;
+    top: 0; /* Don't forget this, required for the stickiness */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+td {
+    font-size: 10pt;
+}

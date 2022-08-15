@@ -1,0 +1,40 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Fields",
+            "name": "fields",
+            "kind": "Grouping"
+        }
+    ],
+    "objects": {
+        "opts": {
+            "displayName": "Options",
+            "properties": {
+                "url": {
+                    "displayName": "URL",
+                    "description": "The url to embed.",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "fields"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "supportsLandingPage": true,
+    "supportsEmptyDataView": true
+}
