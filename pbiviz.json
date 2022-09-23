@@ -4,7 +4,7 @@
         "displayName": "Site Wrapper",
         "guid": "zwcSiteWrapper654973185497AB0CB5296D0E",
         "visualClassName": "Visual",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "description": "A Custom Site Wrapper that can insert any App or webpage into Power BI",
         "supportUrl": "https://zachwritescode.com",
         "gitHubUrl": ""

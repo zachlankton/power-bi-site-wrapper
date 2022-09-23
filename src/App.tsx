@@ -10,9 +10,19 @@ export default function App(props: any) {
         if (node === null) return;
 
         window.addEventListener("message", (e) => {
-            console.log(e);
+            console.log("WRAPPER_MSG_RECEIVED", e);
             if (e.data === "ZWC - Get Settings and Data") {
                 node.contentWindow.postMessage(options.dataViews[0], "*");
+            } else {
+                const parsedData = JSON.parse(e.data);
+                if (parsedData.eventName === "update") {
+                    const dataView = JSON.parse(
+                        parsedData.arguments[0].serializedDataView
+                            .stringifiedDataView
+                    );
+                    console.log(dataView);
+                    node.contentWindow.postMessage(dataView, "*");
+                }
             }
         });
     }, []);
